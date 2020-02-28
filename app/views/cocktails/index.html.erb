@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <h1>Mr. Julio's Cocktail 2</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="cards">
+      <% @cocktails.each do |cocktail| %>
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+              <p>Short description here!</p>
+            </div>
+            <h2 class="card-trip-pricing">£99.99</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= @cocktail.name %></h2>
+        <% @doses.each do |dose| %>
+          <p><%= dose.ingredient.name %> - <%= dose.description %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %>
+  </div>
+</div>
