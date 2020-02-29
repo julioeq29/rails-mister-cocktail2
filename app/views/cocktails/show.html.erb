@@ -6,6 +6,7 @@
         <h2><%= @cocktail.name %></h2>
         <% @doses.each do |dose| %>
           <p><%= dose.ingredient.name %> - <%= dose.description %></p>
+          <p><%= link_to "Delete dose", cocktail_dose_path(@cocktail, dose) %></p>
         <% end %>
       </div>
     </div>
