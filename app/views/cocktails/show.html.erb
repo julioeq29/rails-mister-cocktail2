@@ -41,3 +41,28 @@
   </div>
 </div>
 
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <h3>Add a Review</h3>
+      <%= render "reviews/new", cocktail: @cocktail, dose: @review %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <% @cocktail.reviews.each do |review| %>
+        <ul>
+          <li>
+            <%= review.content%> -
+            <% counter = 0 %>
+            <% 5.times do %>
+              <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+              <% counter += 1 %>
+            <% end %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+

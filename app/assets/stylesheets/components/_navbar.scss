@@ -12,7 +12,7 @@
 }
 
 .btn-navbar {
-  padding: 12px 24px;
+  padding: 6px 20px;
   color: white;
   background-color: #F95659;
   border-radius: 8px;
@@ -20,6 +20,11 @@
 
   &:hover{
     background-color: white;
-    color: #04113d;
+    color: #F95659;
   }
+}
+
+.navbar-font {
+  color: #F95659;
+  font-size: 22px;
 }
