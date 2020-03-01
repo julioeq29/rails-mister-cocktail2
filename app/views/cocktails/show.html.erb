@@ -1,20 +1,35 @@
-<div class="container">
+<div class="container mt-3">
   <div class="row">
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><%= @cocktail.name %></h2>
-        <% @doses.each do |dose| %>
-          <p><%= dose.ingredient.name %> - <%= dose.description %></p>
-          <p><%= link_to "Delete dose", cocktail_dose_path(@cocktail, dose) %></p>
-        <% end %>
+    <div class="col-6">
+      <% if !@cocktail.image_url.nil? %>
+        <%= image_tag @cocktail.image_url, width: 400 %>
+      <% end %>
+    </div>
+    <div class="col-6 cocktail-infos">
+      <h2><%= @cocktail.name %></h2>
+      <div>
+        <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: 'btn-change' %>
       </div>
+      <div>
+    <%= link_to 'Edit cocktail', edit_cocktail_path(@cocktail), class: 'btn-change' %>
+  </div>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %>
+    <div class="col-6">
+      <h3>Doses</h3>
+      <% @doses.each do |dose| %>
+        <div class="cocktail-infos-doses">
+          <p><%= dose.ingredient.name %> - <%= dose.description %></p>
+          <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure to delete #{dose.ingredient.name}" } do %>
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
+

@@ -1,0 +1,18 @@
+.cocktail-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  h2 {
+    color: white;
+  }
+
+  p {
+    color: #04113d;
+  }
+}
+
+.cocktail-infos-doses {
+  display: flex;
+  justify-content: space-between;
+}

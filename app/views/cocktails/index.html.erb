@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container d-flex justify-content-center mt-3">
   <div class="row">
-    <h1>Mr. Julio's Cocktail 2</h1>
+    <%= image_tag 'mrcocktail.png', alt: 'Main logo', width: 500 %>
   </div>
 </div>
 
@@ -9,7 +9,7 @@
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
         <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <img src="<%= cocktail.image_url %>" />
           <div class="card-trip-infos">
             <div>
               <%= link_to cocktail.name, cocktail_path(cocktail) %>

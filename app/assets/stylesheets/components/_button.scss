@@ -1,0 +1,12 @@
+.btn-change {
+  padding: 12px 24px;
+  color: white;
+  background-color: #04113d;
+  border-radius: 8px;
+  transition: 0.3s ease;
+
+  &:hover{
+    background-color: white;
+    color: #F95659;
+  }
+}
