@@ -17,6 +17,10 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import improveDropdown from '../components/init_select2';
+improveDropdown();
+
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
+
 import 'bootstrap';
 
-improveDropdown();

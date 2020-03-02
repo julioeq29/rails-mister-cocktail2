@@ -1,14 +1,22 @@
-<div class="container d-flex justify-content-center mt-3">
+<div class="container margins">
+  <div class="row typed-banner">
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center margins">
   <div class="row">
     <%= image_tag 'mrcocktail.png', alt: 'Main logo', width: 500 %>
   </div>
 </div>
 
-<div class="container">
+<div class="container margins">
   <div class="row">
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
-        <div class="card-trip">
+        <div class="card-trip" data-aos='fade-up'>
           <img src="<%= cocktail.image_url %>" />
           <div class="card-trip-infos">
             <div>
@@ -23,4 +31,3 @@
     </div>
   </div>
 </div>
-

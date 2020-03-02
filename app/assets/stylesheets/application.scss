@@ -26,3 +26,17 @@ a {
     text-decoration: none;
   }
 }
+
+.margins {
+  margin-top: 100px;
+}
+
+.typed-banner {
+  display: flex;
+  justify-content: center;
+}
+
+#banner-typed-text {
+  color: white;
+  font-size: 32px;
+}
